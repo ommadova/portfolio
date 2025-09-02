@@ -73,7 +73,7 @@ h2::after {
   display: block;
   height: 2px;
   width: 10rem;
-  background: #ff3258;
+  background: #645535c5;
   margin: 2rem 0;
 }
 
@@ -105,15 +105,15 @@ a {
   transition: color .2s ease, opacity .2s ease;
   outline: 2px solid transparent;
 }
-a:hover { color: #ff3258; text-decoration: none; }
+a:hover { color: #645535c5; text-decoration: none; }
 
-button:focus, a:focus { outline: 2px solid #ff3258; }
+button:focus, a:focus { outline: 2px solid #645535c5; }
 
 .btn {
   position: relative;
   display: inline-block;
   padding: 1rem 4.2rem;
-  border: 1px solid #ff3258;
+  border: 1px solid none;
   background: transparent;
   color: #f0e9f2;
   cursor: pointer;
@@ -132,10 +132,10 @@ button:focus, a:focus { outline: 2px solid #ff3258; }
 }
 .btn:hover::after, .btn:focus::after {
   right: 0;
-  background: #ff3258;
+  background: #645535c5;
 }
 
-.btn--pink { background: #ff3258; border-color: #ff3258; }
+.btn--pink { background: #645535c5; border-color: none; }
 .btn--pink::after { display: none; }
 .btn--pink:hover, .btn--pink:focus { background: transparent; }
 
@@ -144,7 +144,7 @@ button:focus, a:focus { outline: 2px solid #ff3258; }
   position: relative;
   display: inline-block;
   padding: .6rem 0;
-  border-bottom: 1px solid #ff3258;
+  border-bottom: 1px solid none;
   color: inherit;
 }
 .link_text::after {
@@ -184,7 +184,7 @@ header {
 .brand .dot {
   width: 10px; height: 10px;
   border-radius: 50%;
-  background: #ff3258;
+  background: #645535c5;
 }
 
 .nav .social {
@@ -204,8 +204,8 @@ header {
   background: #f0e9f2;
   transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
-.nav .cta:hover { color: #ff3258; }
-.nav .cta:hover::after { right: 0; height: 2px; background: #ff3258; }
+.nav .cta:hover { color: #645535c5; }
+.nav .cta:hover::after { right: 0; height: 2px; background: #645535c5; }
 
 @media (max-width: 500px) {
   .nav { justify-content: center; }
@@ -233,15 +233,11 @@ header {
 }
 
 .card-inner {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  border-bottom: 1px solid rgb(36, 35, 35);
-  padding-bottom: 6rem;
+   align-items: flex-start; gap: 2.4rem; 
 }
 
-.card-inner .work_text { flex: 0 0 40rem; max-width: 100%; }
-.card-inner .work_image { flex: 1; }
+.card-inner .work_text   { flex: 1 1 62%; max-width: 62%; }   
+.card-inner .work_image { flex: 0 0 auto; max-width: 300px; } 
 
 .work_text p { color: #e5e5e6; }
 
@@ -266,9 +262,11 @@ header {
   gap: 3rem;
   margin-top: 2rem;
 }
-
-.work_image { max-width: 520px; }        
-.work_image img { width: 100%; height: auto; }
+        
+.work_image img { width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;   
+  object-fit: cover; }
 
 /* Alternate L/R layout */
 .projects .card-inner:nth-child(even) {
@@ -276,21 +274,55 @@ header {
 }
 
 @media (max-width: 900px) {
-  .card-inner { flex-direction: column-reverse; align-items: initial; }
-  .card-inner .work_text { flex: initial; }
-  .work_image { max-width: 100%; }
+  .card-inner .work_text,
+  .card-inner .work_image { flex: 1 1 100%; max-width: 100%; }
 }
 
 /* ----- About --------------------------- */
 
-.about { display: grid; gap: 2rem; }
+.about { display: grid; gap: 6rem; align-items: center;  grid-template-columns: 1fr 1fr;}
 .about p { color: #e5e5e6; }
+#about > h2 {
+  grid-column: 1 / -1;
+}
+.about__photo-container {
+  grid-column: 1;                 
+  justify-self: center;
+  width: 280px;                  
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 12px;                  
+  background: #111;               
+  border: 1px solid rgb(36,35,35);
+  overflow: hidden;               
+}
 
-.about__photo-container { margin-top: 3rem; }
+
 .about__photo {
   width: 100%;
-  border: 1px solid rgb(36, 35, 35);
-  border-radius: 6px;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;           
+  display: block;
+}
+
+
+#about .about {
+  grid-column: 2;
+}
+
+
+@media (max-width: 900px) {
+  #about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  #about .about,
+  .about__photo-container {
+    grid-column: 1;
+  }
+  .about__photo-container { order: -1; }
 }
 
 /* ----- Contact ------------------------- */
@@ -317,8 +349,8 @@ header {
 #contact textarea { min-height: 14rem; resize: vertical; }
 
 #contact button {
-  border: 1px solid #ff3258;
-  background: #ff3258;
+  border: 1px solid #645535c5;
+  background: #ae945dc5;
   color: #f0e9f2;
   padding: 1rem 2rem;
   border-radius: 6px;
@@ -368,7 +400,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 5.5rem; width: 5.5rem;
-  background-color: #ff3258;
+  background-color:#645535c5;
   border-radius: 50%;
   z-index: 10;
   visibility: hidden;
