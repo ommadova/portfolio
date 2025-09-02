@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; height: auto; display: block;  }
 
 
 .container {
@@ -85,9 +85,14 @@ h3 {
   h3 { font-size: 2.8rem; }
 }
 
-p { margin: 2.5rem 0; }
+p { 
+  margin: 2.5rem 0; 
+  font-size: 2.2rem;   
+  line-height: 1.7;
+}
 @media (max-width: 900px) {
   p { max-width: 500px; }
+
 }
 
 /* ----- Links & Buttons ----- */
@@ -154,7 +159,7 @@ button:focus, a:focus { outline: 2px solid #ff3258; }
 .link_text:hover::after,
 .link_text:focus::after {
   right: 0;
-  background: #ff3258;
+  background: none;
 }
 
 
@@ -262,12 +267,8 @@ header {
   margin-top: 2rem;
 }
 
-.work_image img {
-  width: 100%;
-  border: 1px solid rgb(36, 35, 35);
-  border-radius: 6px;
-}
-.work_image img + img { margin-top: 2rem; }
+.work_image { max-width: 520px; }        
+.work_image img { width: 100%; height: auto; }
 
 /* Alternate L/R layout */
 .projects .card-inner:nth-child(even) {
@@ -277,6 +278,7 @@ header {
 @media (max-width: 900px) {
   .card-inner { flex-direction: column-reverse; align-items: initial; }
   .card-inner .work_text { flex: initial; }
+  .work_image { max-width: 100%; }
 }
 
 /* ----- About --------------------------- */
