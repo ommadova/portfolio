@@ -240,7 +240,7 @@ header {
 }
 
 .card-inner .work_text   { flex: 1 1 70%; max-width: 70%; }   
-.card-inner .work_image { flex: 0 0 auto; max-width: 300px; } 
+.card-inner .work_image { flex: 0 0 auto; max-width: 350px; } 
 
 .work_text p { color: #e5e5e6; }
 
