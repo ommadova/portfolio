@@ -1,4 +1,4 @@
-
+/* ===== Reset & Base ===== */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -14,6 +14,7 @@ img { max-width: 100%; height: auto; display: block; border-radius: 4px; }
 
 a { color: #0b57d0; text-decoration: none; }
 a:hover { text-decoration: underline; }
+a:focus { outline: 2px solid #0b57d0; outline-offset: 2px; }
 
 .container {
   max-width: 1100px;
@@ -53,6 +54,7 @@ header {
 }
 
 .social { display: flex; gap: 12px; }
+
 .cta {
   padding: 6px 10px;
   border-radius: 6px;
@@ -61,11 +63,10 @@ header {
   color: #222;
   background: #fff;
 }
-.cta:hover { background: #f2f2f2; }
+.cta:hover { background: #f2f2f2; text-decoration: none; }
 
-/* ===== Sections ===== */
+/* ===== Main & Sections ===== */
 main.container { padding-bottom: 24px; }
-
 section { padding: 36px 0; }
 
 .section-title {
@@ -93,6 +94,7 @@ section { padding: 36px 0; }
 
 .hero p { margin: 0 0 14px 0; color: #444; }
 
+/* badges used in hero + projects */
 .badges { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .badge {
@@ -136,24 +138,6 @@ section { padding: 36px 0; }
   color: #444;
 }
 
-.work_list,
-.card .work_list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 12px 0;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.work_list li {
-  padding: 4px 8px;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  font-size: 13px;
-  background: #fafafa;
-}
-
 .work_links {
   display: flex;
   gap: 14px;
@@ -161,14 +145,17 @@ section { padding: 36px 0; }
   font-weight: 600;
 }
 
+/* multiple screenshots (Meal Planner) */
 .work_image img {
   border: 1px solid #eee;
   border-radius: 4px;
 }
+.work_image img + img { margin-top: 8px; }
 
 /* ===== About ===== */
-.about { display: block; }
+.about { display: grid; gap: 10px; }
 .about p { color: #444; }
+.about a { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ===== Contact ===== */
 #contact form {
@@ -221,7 +208,21 @@ footer {
   align-items: center;
 }
 
-.foot .social { gap: 12px; }
+.foot .social {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.foot .social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;             /* space between icon and text */
+  color: #222;
+}
+
+.foot .social a:hover { color: #0b57d0; text-decoration: none; }
+
+.foot .social i { font-size: 1.1rem; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
