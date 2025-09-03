@@ -4,12 +4,12 @@ body { font-family: "Nunito", sans-serif }
 * { margin: 0; padding: 0; box-sizing: inherit; }
 
 html {
-  font-size: 60%;            
+  font-size: 40%;            
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 @media (max-width: 1000px) {
-  html { font-size: 62%; }
+  html { font-size: 42%; }
 }
 
 body {
@@ -162,8 +162,6 @@ button:focus, a:focus { outline: 2px solid #645535c5; }
   background: none;
 }
 
-
-
 header {
   background: transparent;
   border-bottom: 1px solid rgb(36, 35, 35);
@@ -189,10 +187,10 @@ header {
 
 .nav .social {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 .nav .cta {
-  font-size: 1.4rem;
+  font-size: 2.7rem;
   position: relative;
   display: inline-block;
   padding: 1rem 0;
@@ -225,29 +223,37 @@ header {
   gap: 6rem;
 }
 
+.hero .grid .title {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
 
 /* ----- Projects ------------------------ */
 
 .projects {
   display: grid;
   gap: 15rem;
+  margin-top: 2rem;
 }
 
 .card-inner {
- display: flex;                
+  display: flex;                
   flex-direction: row;           
   align-items: flex-start;
   gap: 3rem;
 }
 
-.card-inner .work_text   { flex: 1 1 70%; max-width: 30%; }   
+.card-inner .work_text   { flex: 1 1 60%; max-width: 60%; }   
 .card-inner .work_image { flex: 0 0 auto; max-width: 500px; } 
 
-.work_text p { color: #e5e5e6; font-size:2rem ; }
+.card-inner .work_text h3 { font-size:2.2rem ; }
+
+.work_text p { color: #e5e5e6; font-size:1.5rem ; }
 
 .badges {
   display: flex;
-  gap: .8rem;
+  gap: 1rem;
   flex-wrap: wrap;
   margin: 2rem 0;
 }
