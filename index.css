@@ -183,14 +183,15 @@ header {
   width: 10px; height: 10px;
   border-radius: 50%;
   background: #645535c5;
+  font-size: 2.2rem;
 }
 
 .nav .social {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
 }
 .nav .cta {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   position: relative;
   display: inline-block;
   padding: 1rem 0;
@@ -234,7 +235,7 @@ header {
 .projects {
   display: grid;
   gap: 15rem;
-  margin-top: 2rem;
+  margin-bottom: 7rem; 
 }
 
 .card-inner {
@@ -249,7 +250,7 @@ header {
 
 .card-inner .work_text h3 { font-size:2.2rem ; }
 
-.work_text p { color: #e5e5e6; font-size:1.5rem ; }
+.work_text p { color: #e5e5e6; font-size:1.8rem ; }
 
 .badges {
   display: flex;
@@ -382,6 +383,7 @@ footer {
   text-align: left;
   padding: 6rem 0 3rem;
   border-top: 1px solid rgb(36, 35, 35);
+  font-size: 2.2rem;
 }
 
 .foot {
