@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-size: 1.8rem;          
+  font-size: 1.2rem;          
   font-family: "Nunito", sans-serif;
   color: #e5e5e6;             
   line-height: 1.7;
@@ -229,7 +229,7 @@ header {
 
 .projects {
   display: grid;
-  gap: 12rem;
+  gap: 15rem;
 }
 
 .card-inner {
@@ -239,10 +239,10 @@ header {
   gap: 3rem;
 }
 
-.card-inner .work_text   { flex: 1 1 70%; max-width: 60%; }   
-.card-inner .work_image { flex: 0 0 auto; max-width: 480px; } 
+.card-inner .work_text   { flex: 1 1 70%; max-width: 30%; }   
+.card-inner .work_image { flex: 0 0 auto; max-width: 500px; } 
 
-.work_text p { color: #e5e5e6; }
+.work_text p { color: #e5e5e6; font-size:2rem ; }
 
 .badges {
   display: flex;
