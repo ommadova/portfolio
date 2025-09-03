@@ -239,8 +239,8 @@ header {
   gap: 3rem;
 }
 
-.card-inner .work_text   { flex: 1 1 70%; max-width: 70%; }   
-.card-inner .work_image { flex: 0 0 auto; max-width: 350px; } 
+.card-inner .work_text   { flex: 1 1 70%; max-width: 60%; }   
+.card-inner .work_image { flex: 0 0 auto; max-width: 480px; } 
 
 .work_text p { color: #e5e5e6; }
 
@@ -423,3 +423,5 @@ footer {
 }
 @media (max-width: 900px) { .back-to-top { right: 2rem; } }
 @media (max-width: 500px) { .back-to-top { right: 1rem; } }
+
+.about .actions { display: flex; justify-content: flex-end; }
