@@ -216,7 +216,7 @@ header {
 /* ----- Hero ---------------------------- */
 
 .hero {
-  padding: 16rem 0 3rem;
+  padding: 16rem 0 12rem;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
   margin-top: 15rem;
   align-content: center;
@@ -253,9 +253,9 @@ header {
 .card-inner .work_text   { flex: 1 1 60%; max-width: 60%; }   
 .card-inner .work_image { flex: 0 0 auto; max-width: 500px; } 
 
-.card-inner .work_text h3 { font-size:2.5rem; }
+.card-inner .work_text h3 { font-size:2.8rem; }
 
-.work_text p { color: #e5e5e6; font-size:2rem ; }
+.work_text p { color: #e5e5e6; font-size:2.2rem ; }
 
 .badges {
   display: flex;
