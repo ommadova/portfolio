@@ -218,7 +218,9 @@ header {
 .hero {
   padding: 16rem 0 3rem;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
-  margin-top: 7rem;
+  margin-top: 15rem;
+  align-content: center;
+
 }
 .hero .grid {
   display: grid;
@@ -229,7 +231,6 @@ header {
 .hero .grid .title {
   font-size: 5rem;
   line-height: 1;
-  margin-top: 4rem;
 }
 
 /* ----- Projects ------------------------ */
