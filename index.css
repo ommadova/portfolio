@@ -216,7 +216,7 @@ header {
 /* ----- Hero ---------------------------- */
 
 .hero {
-  padding: 20rem 0 20rem;
+  padding: 25rem 0 30rem;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
   margin-top: 15rem;
   align-content: center;
@@ -268,7 +268,7 @@ header {
   padding: .6rem 1rem;
   border: 1px solid rgb(36, 35, 35);
   border-radius: 999px;
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #f0e9f2;
 }
 
@@ -303,7 +303,7 @@ header {
 .about { display: grid; gap: 6rem; align-items: center;  grid-template-columns: 1fr 1fr;}
 .about p { color: #e5e5e6; }
 #about > h2 {
-  grid-column: 1 / -1;
+  grid-column: 2;
 }
 .about__photo-container {
   grid-column: 1;                 
