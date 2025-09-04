@@ -216,7 +216,7 @@ header {
 /* ----- Hero ---------------------------- */
 
 .hero {
-  padding: 12rem 0 3rem;
+  padding: 16rem 0 3rem;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
 }
 .hero .grid {
@@ -228,7 +228,7 @@ header {
 .hero .grid .title {
   font-size: 5rem;
   line-height: 1;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 /* ----- Projects ------------------------ */
@@ -239,7 +239,7 @@ header {
   margin-bottom: 7rem; 
   font-size:2.7rem;
 }
-.projects .section-title { margin-top: 10rem; } 
+#projects .section-title { margin-top: 3rem; } 
 
 .card-inner {
   display: flex;                
@@ -327,19 +327,22 @@ header {
 
 
 #about .about {
-  grid-column: 2;
-  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
 }
 
-#about .actions {
-  display: flex;
-  justify-content: flex-end;  /* sends the button to the right */
+#about .about .actions {
+  grid-column: 2;
+  justify-self: end;         
+  margin-top: 1rem;          
 }
 
 #about .btn--resume {
   display: inline-flex;
-  align-items:flex-end;
-  gap: .6rem;
+  align-items:center;
+  gap: .8rem;
   font-size: clamp(1.8rem, 1.6vw, 2.2rem); 
   padding: 1.2rem 2.4rem;                   
   border-width: 2px;                        
@@ -360,7 +363,7 @@ header {
 }
 
 /* ----- Contact ------------------------- */
-
+#contact { border-bottom: none; }
 #contact h2 { margin-bottom: 2rem; }
 
 #contact form {
