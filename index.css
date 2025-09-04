@@ -228,7 +228,7 @@ header {
 .hero .grid .title {
   font-size: 5rem;
   line-height: 1;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 /* ----- Projects ------------------------ */
@@ -239,6 +239,7 @@ header {
   margin-bottom: 7rem; 
   font-size:2.7rem;
 }
+#projects .section-title { margin-top: 2rem; } 
 
 .card-inner {
   display: flex;                
@@ -330,8 +331,19 @@ header {
   align-self: center;
 }
 
-.about .bibi-cloud-arrow-down {
- text-align: right;
+#about .actions {
+  display: flex;
+  justify-content: flex-end;  /* sends the button to the right */
+}
+
+#about .btn--resume {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: clamp(1.8rem, 1.6vw, 2.2rem); 
+  padding: 1.2rem 2.4rem;                   
+  border-width: 2px;                        
+  border-radius: 8px;
 }
 
 
