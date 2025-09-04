@@ -137,7 +137,7 @@ button:focus, a:focus { outline: 2px solid #645535c5; }
 
 .btn--pink { background: #645535c5; border-color: none; }
 .btn--pink::after { display: none; }
-.btn--pink:hover, .btn--pink:focus { background: transparent; outline: none; box-shadow: none; }
+.btn--pink:hover {outline: none; box-shadow: none;} .btn--pink:focus { background: transparent; }
 
 
 .link_text {
@@ -218,6 +218,7 @@ header {
 .hero {
   padding: 16rem 0 3rem;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
+  margin-top: 7rem;
 }
 .hero .grid {
   display: grid;
@@ -239,7 +240,7 @@ header {
   margin-bottom: 7rem; 
   font-size:2.7rem;
 }
-#projects .section-title { margin-top: 3rem; } 
+#projects { margin-top: 10rem; } 
 
 .card-inner {
   display: flex;                
@@ -403,7 +404,7 @@ header {
 footer {
   text-align: left;
   padding: 6rem 0 3rem;
-  border-top: 1px solid rgb(36, 35, 35);
+  border-top: none;
   font-size: 2.2rem;
 }
 
