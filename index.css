@@ -216,7 +216,7 @@ header {
 /* ----- Hero ---------------------------- */
 
 .hero {
-  padding: 16rem 0 12rem;
+  padding: 20rem 0 20rem;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
   margin-top: 15rem;
   align-content: center;
