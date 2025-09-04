@@ -137,7 +137,7 @@ button:focus, a:focus { outline: 2px solid #645535c5; }
 
 .btn--pink { background: #645535c5; border-color: none; }
 .btn--pink::after { display: none; }
-.btn--pink:hover, .btn--pink:focus { background: transparent; }
+.btn--pink:hover, .btn--pink:focus { background: transparent; outline: none; box-shadow: none; }
 
 
 .link_text {
@@ -228,7 +228,7 @@ header {
 .hero .grid .title {
   font-size: 5rem;
   line-height: 1;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 /* ----- Projects ------------------------ */
@@ -239,7 +239,7 @@ header {
   margin-bottom: 7rem; 
   font-size:2.7rem;
 }
-#projects .section-title { margin-top: 2rem; } 
+.projects .section-title { margin-top: 10rem; } 
 
 .card-inner {
   display: flex;                
@@ -338,7 +338,7 @@ header {
 
 #about .btn--resume {
   display: inline-flex;
-  align-items: center;
+  align-items:flex-end;
   gap: .6rem;
   font-size: clamp(1.8rem, 1.6vw, 2.2rem); 
   padding: 1.2rem 2.4rem;                   
