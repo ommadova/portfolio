@@ -17,8 +17,18 @@ body {
   font-family: "Nunito", sans-serif;
   color: #e5e5e6;             
   line-height: 1.7;
-  background: #000;
-  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), 
+
+  url("./imgs/hero-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  position:absolute;
+  inset: 0;
+  z-index: -1;
+  
 }
 
 img { max-width: 100%; height: auto; display: block;  }
@@ -221,19 +231,7 @@ header {
   align-content: center;
   position: relative;
   isolation: isolate;                 
-  min-height: 46rem;                  
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), 
-
-  url("./imgs/hero-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  content: "";
-  position:absolute;
-  inset: 0;
-  z-index: -1;
-
+  min-height: 46rem;       
 }
 .hero .grid {
   display: grid;
