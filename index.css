@@ -57,7 +57,7 @@ h1, h2, h3 {
   .title,
   .heading-primary { font-size: 6.5rem; }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .title,
   .heading-primary { font-size: 5.5rem; }
 }
@@ -81,7 +81,7 @@ h3 {
   font-size: 3.6rem;
   margin-bottom: 2rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   h3 { font-size: 2.8rem; }
 }
 
@@ -113,7 +113,7 @@ button:focus, a:focus { outline: 2px solid #645535c5; }
   position: relative;
   display: inline-block;
   padding: 1rem 4.2rem;
-  border: 1px solid none;
+  border: none;
   background: transparent;
   color: #f0e9f2;
   cursor: pointer;
@@ -217,9 +217,13 @@ header {
 
 .hero {
   padding: 35rem 0 30rem;
-  background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
   margin-top: 15rem;
   align-content: center;
+  position: relative;
+  isolation: isolate;                 
+  min-height: 46rem;                  
+  background-color: #000;            
+  overflow: hidden;
 
 }
 .hero .grid {
@@ -232,6 +236,27 @@ header {
   font-size: 5rem;
   line-height: 1;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), 
+
+  url("./imgs/hero-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 600px){
+  .hero { min-height: 38rem; }
+  .hero::before { background-position: center 30%; }
+}
+
+
 
 /* ----- Projects ------------------------ */
 
@@ -251,7 +276,7 @@ header {
 }
 
 .card-inner .work_text   { flex: 1 1 60%; max-width: 60%; }   
-.card-inner .work_image { flex: 0 0 auto; max-width: 500px; } 
+.card-inner .work_image { flex: 0 0 auto; max-width: 520px; } 
 
 .card-inner .work_text h3 { font-size:2.8rem; }
 
@@ -292,11 +317,11 @@ header {
 
 @media (max-width: 900px) {
   .card-inner {
-    flex-direction: column;      /* stack */
+    flex-direction: column;      
     gap: 2rem;
   }
   .card-inner .work_text,
-  .card-inner .work_image { flex: 1 1 100%; max-width: 100%; }
+  .card-inner .work_image { flex: 1 1 100%; max-width: 600px; }
 }
 
 /* ----- About --------------------------- */
@@ -304,7 +329,7 @@ header {
 .about { display: grid; gap: 6rem; align-items: center;  grid-template-columns: 1fr 1fr;}
 .about p { color: #e5e5e6; }
 #about > h2 {
-  grid-column: 2;
+  grid-column: 1 / -1;
 }
 .about__photo-container {
   grid-column: 1;                 
