@@ -113,7 +113,7 @@ button:focus, a:focus { outline: 2px solid #645535c5; }
   position: relative;
   display: inline-block;
   padding: 1rem 4.2rem;
-  border: none;
+  border: #645535c5 2px solid;
   background: transparent;
   color: #f0e9f2;
   cursor: pointer;
@@ -222,8 +222,17 @@ header {
   position: relative;
   isolation: isolate;                 
   min-height: 46rem;                  
-  background-color: #000;            
-  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), 
+
+  url("./imgs/hero-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  position:absolute;
+  inset: 0;
+  z-index: -1;
 
 }
 .hero .grid {
@@ -236,9 +245,9 @@ header {
   font-size: 5rem;
   line-height: 1;
 }
-.hero::before {
+/* .hero::before {
   content: "";
-  position: absolute;
+  position:fixed;
   inset: 0;
   z-index: -1;
   background:
@@ -248,7 +257,7 @@ header {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 
 @media (max-width: 600px){
