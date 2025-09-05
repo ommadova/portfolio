@@ -13,22 +13,39 @@ html {
 }
 
 body {
-  font-size: 1.2rem;          
+  font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
-  color: #e5e5e6;             
+  color: #e5e5e6;
   line-height: 1.7;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), 
+  background: #000;              
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
-  url("./imgs/hero-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+body::before {
   content: "";
-  position:absolute;
+  position: fixed;             
   inset: 0;
-  z-index: -1;
-  
+  z-index: -1;                   
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("./imgs/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform; 
+}
+
+
+@media (max-width: 600px) {
+  body::before {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url("./imgs/hero-bg.png");
+    background-size: cover;
+    background-position: center 30%;
+  }
 }
 
 img { max-width: 100%; height: auto; display: block;  }
@@ -243,19 +260,6 @@ header {
   font-size: 5rem;
   line-height: 1;
 }
-/* .hero::before {
-  content: "";
-  position:fixed;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), 
-
-  url("./imgs/hero-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
 
 
 @media (max-width: 600px){
