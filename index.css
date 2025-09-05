@@ -162,9 +162,11 @@ button:focus, a:focus { outline: 2px solid #645535c5; }
   background: #645535c5;
 }
 
-.btn--pink { background: #645535c5; border-color: none; }
-.btn--pink::after { display: none; }
-.btn--pink:hover {outline: none; box-shadow: none;} .btn--pink:focus { background: transparent; }
+.btn--pink { border:3px solid var(--accent);
+  background: rgba(0,0,0,.30);
+  border-radius:14px; }
+.btn--pink:hover{ background: rgba(100,85,53,.12); }
+.btn--pink:focus-visible{ outline:none; box-shadow:0 0 0 4px rgba(100,85,53,.30); }
 
 
 .link_text {
