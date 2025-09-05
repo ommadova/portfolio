@@ -237,8 +237,8 @@ header {
 .nav .cta:hover { color: #645535c5; }
 .nav .cta:hover::after { right: 0; height: 2px; background: #645535c5; }
 
-@media (max-width: 500px) {
-  .nav { justify-content: center; }
+@media (max-width: 700px) {
+  .nav { justify-content: center; gap: 2rem; }
   .nav .social { gap: 3rem; }
 }
 
